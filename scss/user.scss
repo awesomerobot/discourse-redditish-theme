@@ -1,0 +1,21 @@
+.user-main {
+  @include custom-card;
+}
+
+.horizontal-overflow-nav {
+  .nav-pills > li > a,
+  .nav-pills > li button {
+    border-radius: 0;
+  }
+}
+
+.user-content {
+  padding: 1em 2em 2em;
+}
+
+.users-page {
+  #main-outlet-wrapper #main-outlet {
+    margin-top: 2em;
+    @include custom-card;
+  }
+}

@@ -1,0 +1,17 @@
+.tag-sort-options + hr {
+  display: none;
+}
+
+.all-tag-lists {
+  @include custom-card;
+  .tags-list {
+    margin: 0;
+    border: none;
+    padding: 0;
+  }
+}
+
+section.tag-info {
+  @include custom-card;
+  margin-top: 0;
+}

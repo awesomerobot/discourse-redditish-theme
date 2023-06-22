@@ -1,0 +1,131 @@
+.custom-right-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 0.75em;
+  grid-area: sidebar2;
+
+  &_welcome,
+  &_recent,
+  &_category-about {
+    @include custom-card;
+  }
+
+  &_category-about {
+    p {
+      color: var(--primary-high);
+    }
+  }
+
+  &_welcome {
+    p {
+      margin-bottom: 0;
+    }
+    button {
+      margin: 0.5em 0;
+    }
+  }
+
+  &_controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    #custom-create-topic {
+      flex: 1 1 auto;
+    }
+  }
+
+  &_tags {
+    margin-top: 1em;
+    .discourse-tags {
+      font-size: var(--font-down-1);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25em;
+    }
+  }
+
+  &_recent {
+    tr {
+      border: none;
+      border-top: 1px solid var(--primary-low);
+      &:hover {
+        border-color: var(--primary-high);
+        + tr {
+          border-color: var(--primary-high);
+        }
+      }
+    }
+
+    h4 {
+      font-size: var(--font-down-2);
+      margin-top: 0.25em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0.25em 0 !important; // overriding another override
+      a {
+        color: var(--primary);
+      }
+    }
+
+    .visited {
+      h2 {
+        a {
+          color: var(--primary-medium);
+        }
+      }
+    }
+
+    .custom-topic-layout {
+      border: none !important; // overriding specific selector from mixin
+      border-radius: 0;
+      padding: 1em 0;
+
+      .link-bottom-line,
+      .bullet-separator,
+      .share-toggle,
+      &_excerpt {
+        display: none;
+      }
+
+      &_meta {
+        display: flex;
+        gap: 0.25em;
+        margin-bottom: 0;
+        padding-left: 0;
+        .badge-wrapper {
+          display: none;
+        }
+        [data-user-card] {
+          display: none;
+        }
+        &-posted {
+          min-width: 0;
+          display: flex;
+          flex: 1 1 auto;
+          gap: 0.5em;
+        }
+        &-posted-by {
+          display: none;
+        }
+      }
+
+      &_image {
+        img {
+          height: 100px;
+          object-fit: cover;
+        }
+      }
+
+      .link-top-line {
+        font-size: var(--font-0);
+      }
+    }
+    &-topics {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

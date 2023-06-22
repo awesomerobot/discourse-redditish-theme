@@ -1,0 +1,182 @@
+#topic-title {
+  background: var(--primary);
+  margin: 0;
+  border-radius: 4px 4px 0 0;
+  @include custom-topic-width;
+  box-sizing: border-box;
+  padding: 1em 2em;
+
+  h1 {
+    font-size: var(--font-up-4);
+
+    a {
+      color: var(--secondary);
+    }
+
+    font-weight: normal;
+    margin-bottom: 0.25em;
+  }
+
+  .category-name,
+  .discourse-tag.simple,
+  .discourse-tag.simple:visited,
+  .discourse-tag.simple:hover {
+    color: var(--secondary);
+  }
+
+  a.edit-topic {
+    font-size: var(--font-down-2);
+    vertical-align: 0.15em;
+  }
+
+  .edit-topic-title {
+    .category-name,
+    .discourse-tag.simple {
+      color: var(--primary);
+    }
+
+    .select-kit.multi-select {
+      background: transparent;
+    }
+  }
+}
+
+.signup-cta {
+  @include custom-topic-width;
+  @include custom-card;
+  .buttons {
+    margin-bottom: 0;
+  }
+}
+
+.topic-post.topic-owner {
+  .topic-avatar,
+  .topic-body {
+    border-top: none;
+  }
+}
+
+.names span.first {
+  font-weight: normal;
+}
+
+.topic-list-header {
+  display: none;
+}
+
+.topic-list-body {
+  width: 100%;
+}
+
+.timeline-container .topic-timeline .timeline-scrollarea {
+  border-color: var(--primary-medium);
+}
+
+.timeline-container .topic-timeline .timeline-handle {
+  background-color: var(--tertiary);
+}
+
+.timeline-footer-controls,
+.topic-admin-menu-button {
+  button,
+  .topic-notifications-button summary {
+    @include custom-card;
+    border-radius: 20px;
+    padding-top: 0.65em;
+    padding-bottom: 0.65em;
+    font-size: var(--font-down-1);
+  }
+}
+
+.topic-admin-popup-menu {
+  font-size: var(--font-up-1);
+}
+
+#topic-footer-buttons {
+  @include custom-topic-width;
+  margin-bottom: 0;
+
+  .btn-primary {
+    float: none;
+  }
+
+  .topic-footer-main-buttons {
+    display: none;
+  }
+
+  .select-kit.single-select.dropdown-select-box .select-kit-header {
+    background: var(--secondary);
+    border-color: var(--primary-low-mid);
+
+    &:hover,
+    &:focus {
+      background: var(--primary-low);
+      color: var(--primary);
+
+      .d-icon {
+        color: inherit;
+      }
+
+      .d-icon.d-icon-d-tracking,
+      .d-icon.d-icon-d-watching {
+        color: var(--tertiary);
+      }
+    }
+  }
+
+  .pinned-button .reason .text,
+  .topic-notifications-button .reason .text {
+    margin-left: 1em;
+    color: var(--primary);
+  }
+}
+
+.timeline-container .topic-timeline {
+  .timeline-ago,
+  .start-date,
+  .now-date {
+    color: var(--primary-700);
+  }
+  timeline-replies {
+    font-weight: normal;
+  }
+}
+
+.timeline-footer-controls {
+  flex-direction: column;
+}
+
+.topic-list-bottom {
+  h3 {
+    font-weight: normal;
+    line-height: 1.2;
+  }
+
+  .top-title-buttons {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.container.posts {
+  grid-template-columns: 1fr 8em;
+  @media screen and (max-width: 924px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.posts-wrapper {
+  @include custom-card;
+  border-radius: 0 0 4px 4px;
+  border-top: none !important;
+  padding: 1em 2em 2em;
+}
+
+.topic-map {
+  border-radius: 4px;
+}
+
+.map:first-of-type .buttons .btn {
+  border-radius: 0;
+}

@@ -1,0 +1,53 @@
+.d-header {
+  box-shadow: none;
+  border-bottom: 1px solid var(--primary-low-mid);
+
+  &:hover {
+    border-bottom: 1px solid var(--primary-high);
+  }
+
+  &:has(.menu-panel:hover) {
+    border-bottom: 1px solid var(--primary-low-mid);
+  }
+}
+
+.menu-panel {
+  border-radius: 4px;
+
+  &:hover {
+    border: 1px solid var(--primary-high);
+  }
+}
+
+.user-menu.revamped .menu-tabs-container {
+  padding: 0.5em;
+  font-size: var(--font-down-1);
+
+  .top-tabs {
+    padding-bottom: 0.5em;
+    margin-top: 0.5em;
+  }
+
+  .bottom-tabs {
+    padding-top: 0.5em;
+  }
+}
+
+.d-header-icons .icon {
+  padding: 0.25em 0.25em;
+  border-radius: var(--d-button-border-radius);
+  margin-left: 0.5em;
+
+  .d-icon {
+    font-size: var(--font-up-2);
+  }
+}
+
+.d-header-icons .active .icon {
+  border-color: transparent !important;
+}
+
+.header-sidebar-toggle button .d-icon {
+  font-size: var(--font-up-2);
+  color: var(--primary-medium);
+}

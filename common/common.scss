@@ -1,0 +1,167 @@
+:root {
+  --redditish-bg-color: #dae0e6;
+  --d-button-border-radius: 100px;
+  --d-nav-pill-border-radius: 100px;
+  --d-input-border-radius: 4px;
+  --topic-body-width: 900px;
+}
+
+@mixin custom-card {
+  box-sizing: border-box;
+  padding: 0.75em;
+  border-radius: 0.25em;
+  border: 1px solid var(--primary-low-mid);
+  background: var(--secondary);
+  .discourse-no-touch & {
+    &:hover {
+      border: 1px solid var(--primary-high);
+    }
+  }
+}
+
+@mixin custom-topic-width {
+  width: calc(100% - 8em);
+  @media screen and (max-width: 924px) {
+    width: 100%;
+  }
+}
+
+@import "badges";
+@import "category-banner";
+@import "category-boxes";
+@import "composer";
+@import "groups";
+@import "header";
+@import "right-sidebar";
+@import "search";
+@import "select-kit";
+@import "tag";
+@import "topic";
+@import "topic-list";
+@import "user";
+
+body {
+  background: var(--redditish-bg-color);
+  background-image: none !important; /* overrides category bg because we use it for banners instead */
+
+  &:not(.has-sidebar-page) {
+    .sidebar-wrapper {
+      background: var(--redditish-bg-color);
+    }
+  }
+
+  /* pepesilva.jpg */
+  &.tags-page,
+  &[class*="navigation-"]:not([class*="archetype-"]),
+  &[class*="category-"]:not([class*="archetype-"]) {
+    #main-outlet-wrapper {
+      grid-template-areas:
+        "category-banner category-banner category-banner category-banner category-banner category-banner"
+        "sidebar lspace content sidebar2 rspace sidebar-spacer";
+      grid-template-columns: var(--d-sidebar-width) 1fr minmax(0, 640px) 312px 1fr var(
+          --d-sidebar-width
+        );
+      grid-template-rows: auto 1fr;
+      gap: 0 1.5em;
+
+      @media screen and (max-width: 1500px) {
+        grid-template-columns: auto 1fr minmax(0, 640px) 312px 1fr auto;
+      }
+
+      @media screen and (max-width: 1160px) {
+        .custom-right-sidebar {
+          display: none;
+        }
+        grid-template-areas:
+          "category-banner category-banner category-banner category-banner category-banner"
+          "sidebar lspace content rspace sidebar-spacer";
+        grid-template-columns: auto 1fr minmax(0, 640px) 1fr auto;
+      }
+
+      @media screen and (max-width: 768px) {
+        gap: 0.5em;
+      }
+    }
+  }
+
+  &.has-sidebar-page.tags-page,
+  &.has-sidebar-page[class*="navigation-"]:not([class*="archetype-"]),
+  &.has-sidebar-page[class*="category-"]:not([class*="archetype-"]) {
+    #main-outlet-wrapper {
+      grid-template-areas:
+        "sidebar category-banner category-banner category-banner category-banner category-banner"
+        "sidebar lspace content sidebar2 rspace sidebar-spacer";
+
+      @media screen and (max-width: 1160px) {
+        .custom-right-sidebar {
+          display: none;
+        }
+        grid-template-areas:
+          "sidebar category-banner category-banner category-banner category-banner"
+          "sidebar lspace content rspace sidebar-spacer";
+        grid-template-columns: auto 1fr minmax(0, 640px) 1fr auto;
+      }
+    }
+  }
+
+  &[class*="user-"],
+  &.archetype-regular {
+    .custom-category-banner,
+    .custom-right-sidebar {
+      display: none;
+    }
+  }
+}
+
+.btn-default,
+.btn-primary,
+.btn {
+  &:not(.btn-icon):not([class*="popup-menu-btn"]) {
+    padding: 0.5em 1em;
+  }
+}
+
+.btn[class*="popup-menu-btn"] {
+  border: none;
+}
+
+#main-outlet {
+  max-width: 640px;
+  margin: 0 auto;
+  grid-area: content;
+}
+
+#banner {
+  @include custom-card;
+}
+
+.sidebar-wrapper .sidebar-container {
+  border-right: 1px solid var(--primary-low-mid);
+  &:hover {
+    border-color: var(--primary-high);
+  }
+}
+
+.sidebar-section-wrapper
+  .sidebar-section-header.sidebar-section-header-collapsable {
+  padding-left: 0;
+}
+
+.sidebar-section-link-wrapper button {
+  border-radius: 0;
+  padding: 0 var(--d-sidebar-row-horizontal-padding) !important; // overrides button specificity
+}
+
+.add-to-sidebar {
+  .d-icon-star {
+    color: var(--tertiary);
+  }
+}
+
+.admin-content {
+  @include custom-card;
+}
+
+.body-page {
+  @include custom-card;
+}

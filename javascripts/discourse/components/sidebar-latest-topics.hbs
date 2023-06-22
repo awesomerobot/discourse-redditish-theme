@@ -1,0 +1,9 @@
+<h4>Recent Topics</h4>
+<div
+  class="custom-right-sidebar_recent-topics"
+  {{did-insert this.getLatestTopics}}
+>
+  {{#each this.latestTopics as |topic|}}
+    {{topic-list-item topic=topic}}
+  {{/each}}
+</div>

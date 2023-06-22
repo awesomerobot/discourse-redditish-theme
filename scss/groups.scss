@@ -1,0 +1,8 @@
+.groups-boxes .group-box {
+  border-radius: 4px;
+  border: none;
+}
+
+.group-box-inner {
+  @include custom-card;
+}

@@ -1,0 +1,15 @@
+{{#if (and this.currentUser this.currentUser.can_create_topic)}}
+
+  <div class="custom-post-bar-contents">
+    <a href="/u/{{this.currentUser.username}}">
+      {{avatar this.currentUser imageSize="medium"}}
+    </a>
+
+    <Input
+      @type="text"
+      @placeholder="Create post"
+      {{on "click" this.customCreateTopic}}
+    />
+
+  </div>
+{{/if}}

@@ -1,0 +1,260 @@
+body.tags-page,
+body.category,
+.navigation-topics,
+.categories-list {
+  .navigation-controls {
+    position: fixed;
+    right: 0;
+    top: calc(var(--header-offset) + 1em);
+    z-index: z("header") - 1;
+
+    #create-topic,
+    .select-kit.single-select.dropdown-select-box.notifications-button {
+      display: none;
+    }
+  }
+}
+
+.related-messages-wrapper,
+.suggested-topics-wrapper {
+  @include custom-topic-width;
+}
+
+#suggested-topics-title {
+  font-weight: normal;
+}
+
+.category-breadcrumb {
+  display: none;
+}
+
+.topic-list-bottom .footer-message {
+  @include custom-card;
+  text-align: center;
+  padding: 2.5em 3em 2em;
+}
+
+#header-list-area {
+  display: none;
+}
+
+.category-heading {
+  display: none;
+}
+
+#navigation-bar {
+  width: 100%;
+  margin: 0 0 1em 0;
+  @include custom-card;
+}
+
+.navigation-categories {
+  #main-outlet-wrapper #main-outlet {
+    grid-column-end: sidebar2;
+
+    @media screen and (max-width: 1160px) {
+      grid-column-end: auto;
+    }
+  }
+
+  #main-outlet {
+    .list-controls {
+      display: none;
+    }
+  }
+
+  .custom-right-sidebar {
+    display: none;
+  }
+}
+
+.list-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+div.education {
+  border: none;
+  text-align: left;
+  padding: 0;
+
+  + h3 {
+    text-align: left;
+  }
+
+  p {
+    margin-top: 0;
+  }
+}
+
+.period-chooser-header {
+  border-radius: 0;
+}
+
+.select-kit.dropdown-select-box.period-chooser .period-chooser-row {
+  font-weight: normal;
+}
+
+.select-kit.dropdown-select-box.period-chooser .period-chooser-header {
+  text-transform: none;
+  font-size: var(--font-down-1);
+
+  .d-icon {
+    padding: 0;
+  }
+
+  .date-section {
+    font-weight: normal;
+  }
+
+  h2.selected-name {
+    .date-section {
+      margin: 0;
+    }
+
+    .top-date-string {
+      display: none;
+    }
+  }
+}
+
+.top-date-string {
+  text-transform: none !important;
+  color: var(--primary-high) !important;
+}
+
+.topic-list-bottom {
+  margin-top: 0;
+}
+
+.topic-list {
+  display: flex;
+
+  .topic-list-item.visited {
+    .link-top-line a.title,
+    .topic-excerpt {
+      color: var(--primary-medium);
+    }
+  }
+
+  .topic-list-item-separator {
+    .topic-list-data {
+      display: flex;
+      justify-content: center;
+      background: var(--danger-medium);
+
+      span {
+        position: absolute;
+        margin-top: -0.33em;
+        background: var(--redditish-bg-color);
+        padding: 0.25em;
+      }
+    }
+  }
+
+  tbody {
+    border: none;
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  tr {
+    border: none;
+  }
+}
+
+.custom-topic-layout {
+  @include custom-card;
+  cursor: pointer;
+  width: 100%;
+
+  h2 {
+    margin: 0 !important;
+    font-weight: normal;
+    font-size: var(--font-up-2);
+  }
+
+  &_meta {
+    color: var(--primary-medium);
+    margin-bottom: 0.5em;
+    padding-left: 0.05em;
+
+    a:not(.badge-wrapper) {
+      color: currentColor;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+        color: var(--tertiary);
+      }
+    }
+
+    &-posted {
+      font-size: var(--font-down-1);
+    }
+
+    .badge-wrapper {
+      margin-right: 0;
+    }
+  }
+
+  &_excerpt {
+    margin: 0.5em 0 1em;
+    font-size: var(--font-up-1);
+
+    .topic-excerpt-more {
+      font-size: var(--font-down-1);
+    }
+  }
+
+  &_image {
+    width: 100%;
+    margin: 0.25em 0 0.75em;
+
+    img {
+      width: 100%;
+      height: 500px;
+      object-fit: contain;
+    }
+  }
+
+  &_bottom-bar {
+    font-weight: bold;
+    font-size: var(--font-down-1);
+    color: var(--primary-medium);
+    padding: 0.25em 0;
+
+    span {
+      margin-right: 0.5em;
+    }
+  }
+}
+
+.custom-post-bar:empty {
+  display: none;
+}
+
+.custom-post-bar-contents {
+  @include custom-card;
+
+  display: flex;
+  align-items: center;
+
+  .avatar {
+    margin: 0 1em 0 0;
+    width: 38px;
+    height: 38px;
+  }
+
+  input {
+    width: 100%;
+    margin: 0;
+
+    &:hover {
+      border-color: var(--tertiary);
+    }
+  }
+}

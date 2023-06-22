@@ -1,0 +1,21 @@
+{{#if this.isTopRoute}}
+  <div class="custom-right-sidebar_welcome">
+    <h2>Welcome!</h2>
+    <p>
+      Here you'll find topics from all categories. If you're looking for
+      something more specific, browse
+      <a href="/categories">categories</a>.
+    </p>
+    {{#if (and this.currentUser this.currentUser.can_create_topic)}}
+      <DButton
+        @class="btn-primary"
+        @id="custom-create-topic"
+        @action={{action "customCreateTopic"}}
+        @label="topic.create"
+      />
+    {{/if}}
+  </div>
+  <div class="custom-right-sidebar_recent">
+    <SidebarLatestTopics />
+  </div>
+{{/if}}

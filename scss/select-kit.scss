@@ -1,0 +1,22 @@
+.select-kit.single-select.dropdown-select-box {
+  .select-kit-row {
+    .texts {
+      .name {
+        font-weight: normal;
+      }
+    }
+  }
+
+  &.is-expanded {
+    .select-kit-collection,
+    .select-kit-body {
+      border-radius: 4px;
+    }
+
+    .select-kit-body {
+      &:hover {
+        border: 1px solid var(--primary);
+      }
+    }
+  }
+}

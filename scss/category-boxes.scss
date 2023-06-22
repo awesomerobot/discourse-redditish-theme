@@ -1,0 +1,29 @@
+.category-boxes,
+.category-boxes-with-topics {
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+
+  .category-box {
+    @include custom-card;
+    .category-box-inner {
+      border: none;
+    }
+  }
+
+  .category-box {
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 6px solid var(--category-color);
+
+    &:hover {
+      border-top: 1px solid var(--primary-high);
+      border-right: 1px solid var(--primary-high);
+      border-bottom: 1px solid var(--primary-high);
+      border-left: 6px solid var(--category-color);
+    }
+
+    .subcategories .subcategory {
+      margin-bottom: 0.25em;
+    }
+  }
+}

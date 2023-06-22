@@ -1,0 +1,15 @@
+.search-container {
+  @include custom-card;
+
+  .search-advanced .search-info,
+  .search-advanced .search-results,
+  .search-header {
+    padding: 1em 2em;
+    background: transparent;
+  }
+
+  .search-filters,
+  .search-filters .search-advanced-filters {
+    background: none;
+  }
+}
