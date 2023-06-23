@@ -12,12 +12,23 @@ export default class LatestTopicsSidebar extends Component {
 
   @action
   async getLatestTopics() {
-    const topicList = await this.store.findFiltered("topicList", {
-      filter: "read",
-      params: {
-        order: "latest",
-      },
-    });
+    let topicList;
+
+    if (this.currentUser) {
+      topicList = await this.store.findFiltered("topicList", {
+        filter: "read",
+        params: {
+          order: "latest",
+        },
+      });
+    } else {
+      topicList = await this.store.findFiltered("topicList", {
+        filter: "latest",
+        params: {
+          order: "created",
+        },
+      });
+    }
 
     this.latestTopics = topicList.topics
       .filter((topic) => !topic.closed)
