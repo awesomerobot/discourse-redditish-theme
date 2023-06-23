@@ -258,3 +258,62 @@ div.education {
     }
   }
 }
+
+.topic-list-bottom .dismiss-container-bottom {
+  float: none;
+  margin-bottom: 1em;
+}
+
+.topic-list .topic-list-item-separator .topic-list-data {
+  max-width: unset;
+}
+
+#dismiss-new-bottom,
+#dismiss-topics-bottom {
+  display: block;
+  background: var(--secondary);
+  border: 1px solid var(--redditish-border-color);
+  .discourse-no-touch & {
+    &:hover {
+      border: 1px solid var(--redditish-border-highlight-color);
+
+      color: var(--primary);
+      .d-icon {
+        color: currentColor;
+      }
+    }
+  }
+}
+
+.topic-list {
+  .badge-notification,
+  .category-topic-link td.num .badge-notification {
+    font-size: var(--font-down-3);
+    top: -2px; // ocular alignment
+    padding: 0.2em 0.4em 0.2em;
+  }
+}
+
+.category-boxes {
+  .description,
+  h3 {
+    text-align: left;
+  }
+  .description {
+    margin-top: 0.5em;
+  }
+  .subcategories {
+    margin-left: -0.5em;
+  }
+}
+
+.d-icon-undefined {
+  display: none;
+}
+
+.category-boxes .category-box,
+.category-boxes-with-topics .category-box {
+  .category-logo.aspect-image img {
+    margin-left: 0;
+  }
+}

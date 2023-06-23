@@ -1,6 +1,9 @@
 .custom-category-banner {
   grid-area: category-banner;
   margin: 0 0 0 -1.5em;
+  @media screen and (max-width: 782px) {
+    margin: 0;
+  }
 
   .category-logo.aspect-image {
     float: none;
@@ -30,6 +33,7 @@
     h1 {
       margin-top: -0.2em; // ocular alignment
       text-align: center;
+      padding: 0 0.33em;
     }
     a {
       color: var(--secondary);

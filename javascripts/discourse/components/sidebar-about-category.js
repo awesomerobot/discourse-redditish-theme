@@ -5,6 +5,7 @@ import { tracked } from "@glimmer/tracking";
 import { NotificationLevels } from "discourse/lib/notification-levels";
 import { bind } from "discourse-common/utils/decorators";
 import Composer from "discourse/models/composer";
+import I18n from "I18n";
 
 export default class LatestTopicsSidebar extends Component {
   @service site;
@@ -24,6 +25,12 @@ export default class LatestTopicsSidebar extends Component {
     }
 
     return this.category.subcategory_list_style.includes("topics");
+  }
+
+  get linkedDescription() {
+    return I18n.t(themePrefix("about_category_admin_tip_description"), {
+      topicUrl: this.category.topic_url,
+    });
   }
 
   @action

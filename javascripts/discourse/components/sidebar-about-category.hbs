@@ -3,14 +3,13 @@
   {{#if (or this.category.description this.currentUser)}}
     <div class="custom-right-sidebar_category-about">
       {{#if this.category.description}}
-        <h3>About this category</h3>
+        <h3>{{theme-i18n "about_category"}}</h3>
         {{html-safe this.category.description}}
       {{else}}
         {{#if this.currentUser.admin}}
-          <h3> Psst, hey admins!</h3>
+          <h3>{{theme-i18n "about_category_admin_tip_headline"}}</h3>
           <p>
-            You can add a category description here by editing
-            <a href={{this.category.topic_url}}>this post</a>.
+            {{html-safe this.linkedDescription}}
           </p>
         {{/if}}
       {{/if}}

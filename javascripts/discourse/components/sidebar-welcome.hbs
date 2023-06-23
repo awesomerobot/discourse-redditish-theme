@@ -1,10 +1,8 @@
 {{#if this.isTopRoute}}
   <div class="custom-right-sidebar_welcome">
-    <h2>Welcome!</h2>
+    <h2>{{theme-i18n "top_route_welcome"}}</h2>
     <p>
-      Here you'll find topics from all categories. If you're looking for
-      something more specific, browse
-      <a href="/categories">categories</a>.
+      {{html-safe (theme-i18n "top_route_description")}}
     </p>
     {{#if (and this.currentUser this.currentUser.can_create_topic)}}
       <DButton

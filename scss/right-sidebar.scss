@@ -19,7 +19,7 @@
 
   &_welcome {
     p {
-      margin-bottom: 0;
+      margin-bottom: 0.25em;
     }
     button {
       margin: 0.5em 0;
@@ -50,9 +50,9 @@
       border: none;
       border-top: 1px solid var(--primary-low);
       &:hover {
-        border-color: var(--primary-high);
+        border-color: var(--redditish-border-highlight-color);
         + tr {
-          border-color: var(--primary-high);
+          border-color: var(--redditish-border-highlight-color);
         }
       }
     }

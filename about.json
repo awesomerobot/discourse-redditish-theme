@@ -14,5 +14,8 @@
     ]
   },
   "color_schemes": {},
-  "components": ["https://github.com/discourse/discourse-header-search.git"]
+  "components": [
+    "https://github.com/discourse/discourse-loading-slider.git",
+    "https://github.com/discourse/discourse-full-width-component.git"
+  ]
 }

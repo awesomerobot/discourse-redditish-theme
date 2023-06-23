@@ -1,13 +1,13 @@
 .d-header {
   box-shadow: none;
-  border-bottom: 1px solid var(--primary-low-mid);
+  border-bottom: 1px solid var(--redditish-border-color);
 
   &:hover {
-    border-bottom: 1px solid var(--primary-high);
+    border-bottom: 1px solid var(--redditish-border-highlight-color);
   }
 
   &:has(.menu-panel:hover) {
-    border-bottom: 1px solid var(--primary-low-mid);
+    border-bottom: 1px solid var(--redditish-border-highlight-color);
   }
 }
 
@@ -15,7 +15,7 @@
   border-radius: 4px;
 
   &:hover {
-    border: 1px solid var(--primary-high);
+    border: 1px solid var(--redditish-border-highlight-color);
   }
 }
 

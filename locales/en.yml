@@ -1,3 +1,7 @@
 en:
-  theme_metadata:
-    description: ""
+  top_route_welcome: "Welcome!"
+  top_route_description: "You're viewing a feed containing topics from all categories. If you're looking for something more specific, browse <a href='/categories'>the category list</a>."
+  about_category: "About this category"
+  about_category_admin_tip_headline: "Psst, hey admins!"
+  about_category_admin_tip_description: "You can add a category description here by editing <a href=%{topicUrl}>this post</a>."
+  post_input_placeholder: "Create topic"

@@ -68,6 +68,10 @@
   width: 100%;
 }
 
+.timeline-container.timeline-docked-bottom .timeline-footer-controls {
+  opacity: 1;
+}
+
 .timeline-container .topic-timeline .timeline-scrollarea {
   border-color: var(--primary-medium);
 }
@@ -82,7 +86,8 @@
   .topic-notifications-button summary {
     @include custom-card;
     border-radius: 20px;
-    padding-top: 0.65em;
+    height: 2.6em; // consistency hack
+    padding-top: 0.6em;
     padding-bottom: 0.65em;
     font-size: var(--font-down-1);
   }
@@ -179,4 +184,8 @@
 
 .map:first-of-type .buttons .btn {
   border-radius: 0;
+}
+
+h3.suggested-topics-message {
+  font-weight: normal;
 }
