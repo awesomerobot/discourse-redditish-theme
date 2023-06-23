@@ -269,6 +269,8 @@ div.education {
   max-width: unset;
 }
 
+#dismiss-topics-top,
+#dismiss-new-top,
 #dismiss-new-bottom,
 #dismiss-topics-bottom {
   display: block;
@@ -284,6 +286,15 @@ div.education {
       }
     }
   }
+}
+
+.dismiss-container-top {
+  justify-content: flex-start;
+}
+
+#dismiss-topics-top,
+#dismiss-new-top {
+  margin-bottom: 0.5em;
 }
 
 .topic-list {
