@@ -142,6 +142,10 @@
 
         .link-top-line {
           grid-area: content2;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
         }
 
         &_bottom-bar {
@@ -151,7 +155,7 @@
         &_image {
           grid-area: image;
           width: 90px;
-          height: 65px;
+          height: 85px;
           overflow: hidden;
           margin: 0 0.5em 0 0;
 

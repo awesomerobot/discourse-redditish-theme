@@ -4,7 +4,7 @@
     <div class="custom-right-sidebar_category-about">
       {{#if this.category.description}}
         <h3>{{theme-i18n "about_category"}}</h3>
-        {{html-safe this.category.description}}
+        <p>{{html-safe this.category.description}}</p>
       {{else}}
         {{#if this.currentUser.admin}}
           <h3>{{theme-i18n "about_category_admin_tip_headline"}}</h3>
