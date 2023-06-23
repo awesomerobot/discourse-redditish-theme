@@ -53,7 +53,11 @@
 
   {{#if topic.thumbnails}}
     <div class="custom-topic-layout_image">
-      <img height="500" src={{topic.thumbnails.0.url}} />
+      <img
+        height={{topic.thumbnails.0.height}}
+        width={{topic.thumbnails.0.width}}
+        src={{topic.thumbnails.0.url}}
+      />
     </div>
   {{/if}}
   {{#unless topic.thumbnails}}

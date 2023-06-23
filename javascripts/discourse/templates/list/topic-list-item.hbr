@@ -55,6 +55,7 @@
     <div class="custom-topic-layout_image">
       <img
         height={{topic.thumbnails.0.height}}
+        width={{topic.thumbnails.0.width}}
         src={{topic.thumbnails.0.url}}
       />
     </div>
