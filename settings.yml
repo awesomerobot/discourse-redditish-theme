@@ -1,0 +1,3 @@
+hide_topic_footer_controls:
+  default: true
+  description: "Hides the reply/bookmark/share buttons at the bottom of each topic"

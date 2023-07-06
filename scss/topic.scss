@@ -82,7 +82,7 @@
 
 .timeline-footer-controls,
 .topic-admin-menu-button {
-  button,
+  > button,
   .topic-notifications-button summary {
     @include custom-card;
     border-radius: 20px;
@@ -105,8 +105,22 @@
     float: none;
   }
 
-  .topic-footer-main-buttons {
-    display: none;
+  @if $hide_topic_footer_controls == "true" {
+    .topic-footer-main-buttons {
+      display: none;
+    }
+  } @else {
+    .topic-footer-main-buttons {
+      .btn-default {
+        background-color: var(--secondary);
+        border: 1px solid var(--primary-low-mid);
+        .discourse-no-touch & {
+          &:hover {
+            background-color: var(--primary-medium);
+          }
+        }
+      }
+    }
   }
 
   .select-kit.single-select.dropdown-select-box .select-kit-header {
