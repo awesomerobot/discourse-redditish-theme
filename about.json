@@ -5,17 +5,10 @@
   "name": "redditish",
   "modifiers": {
     "serialize_topic_excerpts": true,
-    "topic_thumbnail_sizes": [
-      [200, 200],
-      [300, 300],
-      [400, 400],
-      [600, 600],
-      [800, 800]
-    ]
+    "topic_thumbnail_sizes": [[620, 500]]
   },
   "color_schemes": {},
   "components": [
-    "https://github.com/discourse/discourse-loading-slider.git",
     "https://github.com/discourse/discourse-full-width-component.git"
   ]
 }
