@@ -2,12 +2,12 @@ import Component from "@glimmer/component";
 import { inject as service } from "@ember/service";
 import { action, set } from "@ember/object";
 import { tracked } from "@glimmer/tracking";
+import { dependentKeyCompat } from "@ember/object/compat";
 
 export default class AddToSidebar extends Component {
   @service currentUser;
   @tracked saved = false;
-  @tracked isInSidebar = this._isInSidebar();
-
+  @tracked sidebarChanged = false;
   saveAttrNames = ["sidebar_category_ids", "sidebar_tag_names"];
 
   get shouldNotRender() {
@@ -16,7 +16,10 @@ export default class AddToSidebar extends Component {
     return (category && tag) || (!category && !tag);
   }
 
-  _isInSidebar() {
+  @dependentKeyCompat
+  get isInSidebar() {
+    // need to do this to get DButton to update
+    this.sidebarChanged;
     const category = this.args.category;
     const tag = this.args.tag;
 
@@ -25,7 +28,7 @@ export default class AddToSidebar extends Component {
         this.currentUser.sidebar_category_ids.includes(category.id)) ||
       (tag &&
         this.currentUser.sidebar_tags.some(
-          (savedTag) => savedTag.name === this.args.tag.name
+          (savedTag) => savedTag.name === tag.name
         ))
     );
   }
@@ -77,7 +80,8 @@ export default class AddToSidebar extends Component {
           set(this.currentUser, "sidebar_tags", result.user.sidebar_tags);
         }
 
-        this.isInSidebar = this._isInSidebar(); // need to manually udpate
+        // Update after the currentUser properties change
+        this.sidebarChanged = !this.sidebarChanged;
       })
       .catch((error) => {
         console.error("Error updating sidebar:", error);

@@ -6,7 +6,7 @@ import Composer from "discourse/models/composer";
 import I18n from "I18n";
 import { getOwner } from "discourse-common/lib/get-owner";
 
-export default class LatestTopicsSidebar extends Component {
+export default class SidebarAboutTag extends Component {
   @service store;
   @service router;
   @service currentUser;

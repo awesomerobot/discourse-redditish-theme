@@ -7,7 +7,7 @@ import { bind } from "discourse-common/utils/decorators";
 import Composer from "discourse/models/composer";
 import I18n from "I18n";
 
-export default class LatestTopicsSidebar extends Component {
+export default class SidebarAboutCategory extends Component {
   @service site;
   @service router;
   @service currentUser;
