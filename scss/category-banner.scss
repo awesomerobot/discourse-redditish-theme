@@ -1,3 +1,4 @@
+.custom-tag-banner,
 .custom-category-banner {
   grid-area: category-banner;
   margin: 0 0 0 -1.5em;
@@ -38,5 +39,19 @@
     a {
       color: var(--secondary);
     }
+  }
+}
+
+.custom-tag-banner {
+  h1 a {
+    color: var(--primary-low);
+    font-weight: normal;
+    .d-icon {
+      font-size: var(--font-down-3);
+      color: var(--primary-low-mid);
+    }
+  }
+  &_meta {
+    background: var(--primary-high);
   }
 }

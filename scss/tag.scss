@@ -12,6 +12,19 @@
 }
 
 section.tag-info {
-  @include custom-card;
+  background: var(--tertiary-low);
+  padding: 1em;
+  border: none;
+  border-radius: 0;
   margin-top: 0;
+}
+
+.tags-page {
+  #main-outlet {
+    display: flex;
+    flex-direction: column;
+  }
+  section.tag-info {
+    order: -1;
+  }
 }

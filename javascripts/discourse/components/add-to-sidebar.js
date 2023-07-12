@@ -25,7 +25,7 @@ export default class AddToSidebar extends Component {
         this.currentUser.sidebar_category_ids.includes(category.id)) ||
       (tag &&
         this.currentUser.sidebar_tags.some(
-          (savedTag) => savedTag.name === this.args.tag.id
+          (savedTag) => savedTag.name === this.args.tag.name
         ))
     );
   }
@@ -51,21 +51,20 @@ export default class AddToSidebar extends Component {
     } else if (this.args.tag) {
       let sidebarTagNames = sidebarTags.map((tag) => tag.name);
       let tagIsMatched = sidebarTags.some(
-        (tag) => tag.name === this.args.tag.id
+        (tag) => tag.name === this.args.tag.name
       );
 
       if (tagIsMatched) {
         sidebarTagNames = sidebarTagNames.filter(
-          (name) => name !== this.args.tag.id
+          (name) => name !== this.args.tag.name
         );
       } else {
-        sidebarTagNames.push(this.args.tag.id);
+        sidebarTagNames.push(this.args.tag.name);
       }
 
       sidebarTags = sidebarTagNames.map((name) => {
         return { name };
       });
-
       set(this.currentUser, "sidebar_tag_names", sidebarTagNames);
     }
 

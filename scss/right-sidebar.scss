@@ -7,13 +7,19 @@
 
   &_welcome,
   &_recent,
-  &_category-about {
+  &_category-about,
+  &_tag-about {
     @include custom-card;
   }
 
+  &_tag-about,
   &_category-about {
     p {
       color: var(--primary-high);
+      margin: 0;
+      + .custom-right-sidebar_controls {
+        margin-top: 1em;
+      }
     }
     &.-tags-and-subcategories {
       display: flex;

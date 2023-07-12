@@ -7,7 +7,7 @@
         <p>{{html-safe this.category.description}}</p>
       {{else}}
         {{#if this.currentUser.admin}}
-          <h3>{{theme-i18n "about_category_admin_tip_headline"}}</h3>
+          <h3>{{theme-i18n "about_admin_tip_headline"}}</h3>
           <p>
             {{html-safe this.linkedDescription}}
           </p>
@@ -66,7 +66,6 @@
             </div>
           </div>
         {{/if}}
-
       </div>
     {{/if}}
   {{/if}}
