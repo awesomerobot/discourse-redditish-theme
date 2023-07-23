@@ -132,10 +132,18 @@ div.education {
 .topic-list {
   display: flex;
 
-  .topic-list-item.visited {
-    .link-top-line a.title,
-    .topic-excerpt {
-      color: var(--primary-medium);
+  .topic-list-item {
+    &.visited {
+      .link-top-line a.title,
+      .topic-excerpt {
+        color: var(--primary-medium);
+      }
+    }
+
+    &.selected {
+      .custom-topic-layout {
+        box-shadow: inset 3px 0 0 var(--danger);
+      }
     }
   }
 
