@@ -21,7 +21,7 @@ export default class FakeInputCreate extends Component {
     if (document.querySelector(".d-editor-input")) {
       document.querySelector(".d-editor-input").focus();
     } else {
-      this.composer.openComposer({
+      this.composer.open({
         action: Composer.CREATE_TOPIC,
         draftKey: Composer.NEW_TOPIC_KEY,
         categoryId: this.category?.id,

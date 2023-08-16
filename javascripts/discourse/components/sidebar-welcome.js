@@ -18,7 +18,7 @@ export default class SidebarWelcome extends Component {
 
   @action
   customCreateTopic() {
-    this.composer.openComposer({
+    this.composer.open({
       action: Composer.CREATE_TOPIC,
       draftKey: Composer.NEW_TOPIC_KEY,
       categoryId: this.args.category?.id,
