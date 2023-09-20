@@ -49,26 +49,6 @@ body.category,
   @include custom-card;
 }
 
-.navigation-categories {
-  #main-outlet-wrapper #main-outlet {
-    grid-column-end: sidebar2;
-
-    @media screen and (max-width: 1160px) {
-      grid-column-end: auto;
-    }
-  }
-
-  #main-outlet {
-    .list-controls {
-      display: none;
-    }
-  }
-
-  .custom-right-sidebar {
-    display: none;
-  }
-}
-
 .list-controls {
   display: flex;
   flex-direction: column;

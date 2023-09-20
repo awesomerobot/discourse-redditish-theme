@@ -62,12 +62,12 @@
   }
 
   &_recent {
-    tr {
+    &-topics-wrappper {
       border: none;
       border-top: 1px solid var(--primary-low);
       &:hover {
         border-color: var(--redditish-border-highlight-color);
-        + tr {
+        + .custom-right-sidebar_recent-topics-wrappper {
           border-color: var(--redditish-border-highlight-color);
         }
       }
