@@ -1,23 +1,24 @@
 {{#if this.category}}
   <div class="custom-category-banner">
-  <div class="custom-category-banner_background" style="{{this.bannerBg}}" />
-      {{#if this.category.uploaded_logo.url}}
-        <CategoryLogo @category={{this.category}} />
+      <div class="custom-category-banner_background" style="{{this.bannerBg}}">
+        {{#if this.category.uploaded_logo.url}}
+          <CategoryLogo @category={{this.category}} />
+        {{/if}}
       </div>
-    {{/if}}
-    <div class="custom-category-banner_meta" style="{{this.categoryBgColor}}">
-      {{#unless this.category.uploaded_logo.url}}
-        <div class="custom-category-banner_meta-text">
-          <h1>
-            <a
-              href="/c/{{this.category.name}}"
-              style="{{this.categoryTextColor}}"
-            >
-              {{this.category.name}}
-            </a>
-          </h1>
-        </div>
-      {{/unless}}
+
+      <div class="custom-category-banner_meta" style="{{this.categoryBgColor}}">
+        {{#unless this.category.uploaded_logo.url}}
+          <div class="custom-category-banner_meta-text">
+            <h1>
+              <a
+                href="/c/{{this.category.name}}"
+                style="{{this.categoryTextColor}}"
+              >
+                {{this.category.name}}
+              </a>
+            </h1>
+          </div>
+        {{/unless}}
     </div>
   </div>
 {{/if}}
