@@ -1,6 +1,7 @@
 {
-  "author": "k",
+  "author": "lux",
   "license": "MIT",
+  "basedOn": "discourse-redditish-theme",
   "devDependencies": {
     "eslint-config-discourse": "latest"
   }
