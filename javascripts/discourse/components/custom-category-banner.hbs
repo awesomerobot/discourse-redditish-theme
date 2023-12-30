@@ -1,7 +1,9 @@
 {{#if this.category}}
   <div class="custom-category-banner">
-    {{#if this.category.uploaded_logo.url}}
+      {{#if this.bannerBg}}
       <div class="custom-category-banner_background" style="{{this.bannerBg}}">
+      {{/if}}
+      {{#if this.category.uploaded_logo.url}}
         <CategoryLogo @category={{this.category}} />
       </div>
     {{/if}}
@@ -11,7 +13,7 @@
           <h1>
             <a
               href="/c/{{this.category.name}}"
-              style="{{this.categoryTextColor}}"
+              {{!-- style="{{this.categoryTextColor}}" --}}
             >
               {{this.category.name}}
             </a>
