@@ -1,19 +1,13 @@
 .category-boxes,
 .category-boxes-with-topics {
   grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-
+  
   .category-box {
     @include custom-card;
-    .category-box-inner {
-      border: none;
-    }
-  }
-
-  .category-box {
     border-top: 1px solid transparent;
     border-right: 1px solid transparent;
     border-bottom: 1px solid transparent;
-    border-left: 6px solid var(--category-color);
+    // border-left: 6px solid var(--category-color);
 
     .category-logo {
       margin-left: 50px;
@@ -24,7 +18,12 @@
     .category-logo.aspect-image img {
       display: block;
       width: 40px;
-      height: 40px;      
+      height: 40px;
+      margin-left: 500px;
+      margin-right: auto;
+      margin-top: 200em;
+      margin-bottom: auto;
+
     }
 
     @supports (--custom: property) {
@@ -34,6 +33,27 @@
         width: calc(var(--height) * var(--aspect-ratio));
         max-width: 100%;
         }
+    }
+
+    .description {
+      margin-bottom: 1em;
+      font-size: var(--font-0);
+      color: var(--primary-med-or-secondary-high);
+      position: relative;
+      @include line-clamp(4);
+  
+      //  allow clicks to fall through the description text to the category below...
+      pointer-events: none;
+      .overflow {
+        max-height: 6em;
+        div a {
+          //  ...but links in description should still be clickable
+          pointer-events: auto;
+        }
+      }
+    }
+    h3 {
+      text-align: center;
     }
   }
 }
