@@ -37,13 +37,13 @@
       .category-logo.aspect-image img {
         display: block;
         width: auto;
-        height: 40px;
+        height: 25px;
         margin: 0 auto 1em auto;
       }
   
       @supports (--custom: property) {
         .category-logo.aspect-image img {
-          --height: 40px;
+          --height: 25px;
           height: var(--height);
           width: calc(var(--height) * var(--aspect-ratio));
           max-width: 100%;
