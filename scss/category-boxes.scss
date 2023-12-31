@@ -29,9 +29,10 @@
 
     @supports (--custom: property) {
       .category-logo.aspect-image img {
-        --height: 100px;
+        --height: 50px;
+        height: var(--height);
         width: calc(var(--height) * var(--aspect-ratio));
-        // max-width: 100%;
+        max-width: 100%;
         // margin-left: 50px;
         // margin-right: auto;
         // margin-top: 1em;
