@@ -19,8 +19,8 @@
 }
 
 @mixin custom-topic-width {
-  width: calc(100% - 8em);
-  @media screen and (max-width: 924px) {
+  width: calc(100% - 2em);
+  @media screen and (max-width: 1400px) {
     width: 100%;
   }
 }

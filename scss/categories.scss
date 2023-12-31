@@ -8,7 +8,7 @@
   #main-outlet-wrapper #main-outlet {
     grid-column-end: sidebar2;
 
-    @media screen and (max-width: 1160px) {
+    @media screen and (max-width: 1400px) {
       grid-column-end: auto;
     }
   }
