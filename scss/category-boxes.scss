@@ -15,12 +15,12 @@
     border-bottom: 1px solid transparent;
     border-left: 6px solid var(--category-color);
 
-    .category-logo {
-      margin-left: 50px;
-      margin-right: auto;
-      margin-top: 20em;
-      margin-bottom: auto;
-    }
+    // .category-logo {
+    //   margin-left: 50px;
+    //   margin-right: auto;
+    //   margin-top: 20em;
+    //   margin-bottom: auto;
+    // }
     .category-logo.aspect-image img {
       display: block;
       width: 40px;
@@ -31,11 +31,11 @@
       .category-logo.aspect-image img {
         --height: 40px;
         width: calc(var(--height) * var(--aspect-ratio));
-        max-width: 100%;
-        margin-left: 50px;
-        margin-right: auto;
-        margin-top: 1em;
-        margin-bottom: auto;
+        // max-width: 100%;
+        // margin-left: 50px;
+        // margin-right: auto;
+        // margin-top: 1em;
+        // margin-bottom: auto;
         }
     }
 
