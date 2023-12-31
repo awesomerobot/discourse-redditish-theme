@@ -17,17 +17,17 @@
 
     .category-logo.aspect-image img {
       display: block;
-      width: 25px;
-      height: 25px;
+      width: 40px;
+      height: 40px;
       margin: 0 auto 1em auto;
     }
 
     @supports (--custom: property) {
       .category-logo.aspect-image img {
-      //   --height: 40px;
-        height: 25px;
-        width: calc(25px * var(--aspect-ratio));
+        --height: 40px;
+        width: calc(var(--height) * var(--aspect-ratio));
         max-width: 100%;
+        align-items: center;
       }
     }
 
