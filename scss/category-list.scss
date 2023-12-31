@@ -79,17 +79,18 @@
   
       .category-logo.aspect-image img {
         display: block;
-        width: auto;
+        width: 200px;
         height: 5px;
         margin: 0 auto 1em auto;
       }
   
       @supports (--custom: property) {
         .category-logo.aspect-image img {
-          --height: 5px;
-          height: var(--height);
-          width: calc(var(--height) * var(--aspect-ratio));
-          max-width: 100%;
+        --height: 5px;
+        height: var(--height);
+        //   width: calc(var(--height) * var(--aspect-ratio));
+        width: 10px;
+        max-width: 100%;
         }
       }
     }
