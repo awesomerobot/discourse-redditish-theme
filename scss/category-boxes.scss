@@ -22,7 +22,7 @@
         height: var(--height);
         --width: calc(var(--height) * var(--aspect-ratio))
         width: var(--width);
-        padding-left: calc(50% - (var(--width) / 2));
+        padding-left: calc(50% - (var(--width)));
 
         max-width: 100%;
         }
