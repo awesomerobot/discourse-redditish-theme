@@ -35,18 +35,5 @@
         max-width: 100%;
         }
     }
-
-    .discourse-no-touch & {
-      &:hover {
-        border-top: 1px solid var(--redditish-border-highlight-color);
-        border-right: 1px solid var(--redditish-border-highlight-color);
-        border-bottom: 1px solid var(--redditish-border-highlight-color);
-        border-left: 6px solid var(--category-color);
-      }
-    }
-
-    .subcategories .subcategory {
-      margin-bottom: 0.25em;
-    }
   }
 }
