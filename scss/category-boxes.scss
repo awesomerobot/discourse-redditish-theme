@@ -19,7 +19,8 @@
       display: block;
       width: 40px;
       height: 40px;
-      margin-left: 3em;
+      max-width: 100%;
+      margin-left: 50%;
       margin-right: auto;
       margin-top: 1em;
       margin-bottom: auto;
@@ -31,7 +32,7 @@
         --height: 40px;
         width: calc(var(--height) * var(--aspect-ratio));
         max-width: 100%;
-        margin-left: 3em;
+        margin-left: 50%;
         margin-right: auto;
         margin-top: 1em;
         margin-bottom: auto;
