@@ -28,6 +28,7 @@
         --height: 40px;
         width: calc(var(--height) * var(--aspect-ratio));
         max-width: 100%;
+        margin: auto auto 1em auto;
       }
     }
 
