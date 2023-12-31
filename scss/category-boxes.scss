@@ -15,22 +15,22 @@
     border-bottom: 1px solid transparent;
     border-left: 6px solid var(--category-color);
 
-    // .category-logo {
-    //   margin-left: 50px;
-    //   margin-right: auto;
-    //   margin-top: 20em;
-    //   margin-bottom: auto;
-    // }
+    .category-logo {
+      margin-left: 50px;
+      margin-right: auto;
+      margin-top: 20em;
+      margin-bottom: auto;
+    }
     .category-logo.aspect-image img {
-      display: inline;
+      display: block;
       width: 40px;
-      height: 100px;      
+      height: 40px;      
     }
 
     @supports (--custom: property) {
       .category-logo.aspect-image img {
         --height: 50px;
-        // height: var(--height);
+        height: var(--height);
         width: calc(var(--height) * var(--aspect-ratio));
         max-width: 100%;
         }
