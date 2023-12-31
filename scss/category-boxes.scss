@@ -13,10 +13,7 @@
       display: block;
       width: 40px;
       height: 40px;
-      padding-left: 50%;
-      // margin-top: auto;
-      // margin-bottom: auto;
-
+      padding-left: calc(50% - 20px);
     }
 
     @supports (--custom: property) {
