@@ -13,7 +13,7 @@
       display: block;
       width: 40px;
       height: 40px;
-      margin-left: 0.5fr;
+      margin-left: 50px;
       // margin-top: auto;
       // margin-bottom: auto;
 
@@ -25,7 +25,6 @@
         height: var(--height);
         width: calc(var(--height) * var(--aspect-ratio));
         max-width: 100%;
-        margin-left: 50px;
         }
     }
 
