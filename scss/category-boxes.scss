@@ -23,20 +23,16 @@
     // }
     .category-logo.aspect-image img {
       display: inline;
-      width: 25px;
-      height: 40px;      
+      width: 40px;
+      height: 100px;      
     }
 
     @supports (--custom: property) {
       .category-logo.aspect-image img {
         --height: 50px;
-        height: var(--height);
+        // height: var(--height);
         width: calc(var(--height) * var(--aspect-ratio));
         max-width: 100%;
-        margin-left: 50px;
-        // margin-right: auto;
-        // margin-top: 1em;
-        // margin-bottom: auto;
         }
     }
 
