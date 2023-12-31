@@ -20,7 +20,10 @@
       .category-logo.aspect-image img {
         --height: 40px;
         height: var(--height);
-        width: calc(var(--height) * var(--aspect-ratio));
+        --width: calc(var(--height) * var(--aspect-ratio))
+        width: var(--width);
+        padding-left: calc(50% - (var(--width) / 2));
+
         max-width: 100%;
         }
     }
