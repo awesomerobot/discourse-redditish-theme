@@ -21,7 +21,7 @@
 
     @supports (--custom: property) {
       .category-logo.aspect-image img {
-        --height: 50px;
+        --height: 200px;
         height: var(--height);
         width: calc(var(--height) * var(--aspect-ratio));
         max-width: 100%;
