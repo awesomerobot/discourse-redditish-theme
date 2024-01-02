@@ -28,7 +28,7 @@
     height: 6em;
     margin: 0 auto;
     padding: 1em 0 0.25em;
-     display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     h1 {
@@ -55,13 +55,3 @@
     background: var(--primary-high);
   }
 }
-
-// .custom-category-banner-background {
-//    @if schemeType() == "dark" {
-//         // background-image: #{this.category.uploaded_background_dark.url()};
-//         background-color: black;
-//     }
-//   @else {
-//           background: blue;
-//       } 
-//   }
