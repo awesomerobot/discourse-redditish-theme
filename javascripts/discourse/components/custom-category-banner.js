@@ -1,6 +1,5 @@
 import Component from "@glimmer/component";
 import { inject as service } from "@ember/service";
-import { htmlSafe } from "@ember/template";
 
 export default class CustomCategoryBanner extends Component {
   @service router;
@@ -14,23 +13,21 @@ export default class CustomCategoryBanner extends Component {
   }
 
   get bannerBg() {
-    @if #{schemeType()} == dark {
-      body {
-        return htmlSafe(
-          `background: url("${this.category.uploaded_background_dark?.url}");
-           background-size: cover; 
-           background-position: center center;;`
-        );
-          }
-  } @else {
-    return htmlSafe(
-      `background: url("${this.category.uploaded_background?.url}");
+    if (schemeType() == dark) {
+      return htmlSafe(
+        `background: url("${this.category.uploaded_background_dark?.url}");
+         background-size: cover; 
+         background-position: center center;;`
+      );
+
+    }
+    else {
+      return htmlSafe(
+        `background: url("${this.category.uploaded_background?.url}");
        background-size: cover; 
        background-position: center center;;`
-    );
-      } 
-  }
-  
+      );
+    }
   }
 
   get categoryBgColor() {
