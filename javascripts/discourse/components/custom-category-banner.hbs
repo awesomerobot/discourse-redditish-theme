@@ -1,6 +1,6 @@
 {{#if this.category}}
   <div class="custom-category-banner">
-      <div class="custom-category-banner_background" style="custom-category-banner-background">
+      <div class="custom-category-banner_background" style="{{this.bannerBg}}">
         {{#if this.category.uploaded_logo.url}}
           <CategoryLogo @category={{this.category}} />
         {{/if}}
