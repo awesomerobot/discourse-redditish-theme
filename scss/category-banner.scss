@@ -2,7 +2,7 @@
 .custom-category-banner {
   grid-area: category-banner;
   margin: 0 0 0 -1.5em;
-  @media screen and (max-width: 782px) {
+  @media screen and (max-width: 200px) {
     margin: 0;
   }
 
@@ -18,7 +18,7 @@
     height: 12em;
 
     .category-logo.aspect-image {
-      --max-height: 100px;
+      --max-height: 50px;
     }
   }
   &_meta {

@@ -9,7 +9,7 @@
   box-sizing: border-box;
   padding: 0.75em;
   border-radius: 0.25em;
-  border: 1px solid var(--redditish-border-color);
+  // border: 1px solid var(--redditish-border-color);
   background: var(--secondary);
   .discourse-no-touch & {
     &:hover {
@@ -19,8 +19,8 @@
 }
 
 @mixin custom-topic-width {
-  width: calc(100% - 8em);
-  @media screen and (max-width: 924px) {
+  width: calc(100% - 2em);
+  @media screen and (max-width: 1400px) {
     width: 100%;
   }
 }
