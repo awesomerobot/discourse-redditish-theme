@@ -29,10 +29,12 @@
     }
 
     .description {
+      padding-top: 20px;
       margin-bottom: 1em;
       font-size: var(--font-0);
       color: var(--primary-med-or-secondary-high);
       position: relative;
+      text-align: center;
       @include line-clamp(4);
   
       //  allow clicks to fall through the description text to the category below...
