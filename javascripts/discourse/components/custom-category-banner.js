@@ -15,22 +15,18 @@ export default class CustomCategoryBanner extends Component {
 
   get bannerBg() {
     const schemeType = getComputedStyle(document.body)
-    .getPropertyValue("--scheme-type")
-    .trim();
-    var background_url;
+      .getPropertyValue("--scheme-type")
+      .trim();
+    var background_url = this.category.uploaded_background?.url
 
     // console.log(schemeType);
 
     if (schemeType == "dark") {
-      console.log("Uploaded_background_dark.url")
-      console.log(this.category.uploaded_background_dark?.url)
-      if (this.category.uploaded_background_dark?.url != "") {
+      // console.log("Uploaded_background_dark.url")
+      // console.log(this.category.uploaded_background_dark?.url)
+      if (this.category.uploaded_background_dark?.url) {
         background_url = this.category.uploaded_background_dark?.url
       }
-
-    }
-    else {
-      background_url = this.category.uploaded_background?.url
     }
 
     return htmlSafe(
