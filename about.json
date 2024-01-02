@@ -10,6 +10,7 @@
   "color_schemes": {},
   "components": [
     "https://github.com/discourse/discourse-full-width-component.git",
-    "https://github.com/discourse/discourse-header-search.git"
+    "https://github.com/discourse/discourse-header-search.git",
+    "https://github.com/discourse/discourse-color-scheme-toggle"
   ]
 }
