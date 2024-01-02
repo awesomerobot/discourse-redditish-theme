@@ -9,6 +9,10 @@
   .category-logo.aspect-image {
     float: none;
     margin: 0;
+    height: 100px;
+  }
+  .category-logo.aspect-image img {
+    height: 100%;
   }
 
   &_background {
@@ -18,7 +22,7 @@
     height: 12em;
 
     .category-logo.aspect-image {
-      --max-height: 50px;
+      --max-height: 100px;
     }
   }
   &_meta {
