@@ -18,11 +18,11 @@ export default class CustomCategoryBanner extends Component {
 
   get bannerBg() {
     
-    return htmlSafe(
-      `background: url("${this.category.uploaded_background?.url}");
-     background-size: cover; 
-     background-position: center center;;`
-    );
+    // return htmlSafe(
+    //   `background: url("${this.category.uploaded_background?.url}");
+    //  background-size: cover; 
+    //  background-position: center center;;`
+    // );
 
     if (schemeType == "dark") {
       return htmlSafe(
