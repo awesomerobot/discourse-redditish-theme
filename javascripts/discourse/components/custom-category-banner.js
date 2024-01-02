@@ -1,9 +1,9 @@
 import Component from "@glimmer/component";
 import { inject as service } from "@ember/service";
 
-const schemeType = getComputedStyle(document.body)
-.getPropertyValue("--scheme-type")
-.trim();
+// const schemeType = getComputedStyle(document.body)
+// .getPropertyValue("--scheme-type")
+// .trim();
 
 export default class CustomCategoryBanner extends Component {
   @service router;
