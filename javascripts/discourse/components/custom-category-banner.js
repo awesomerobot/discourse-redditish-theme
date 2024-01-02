@@ -14,17 +14,12 @@ export default class CustomCategoryBanner extends Component {
   }
 
   get bannerBg() {
-    // return htmlSafe(
-    //   `background: url("${this.category.uploaded_background?.url}");
-    //    background-size: cover; 
-    //    background-position: center center;;`
-    // );
     const schemeType = getComputedStyle(document.body)
     .getPropertyValue("--scheme-type")
     .trim();
 
     console.log(schemeType);
-    
+
     if (schemeType == "dark") {
       return htmlSafe(
         `background: url("${this.category.uploaded_background_dark?.url}");
