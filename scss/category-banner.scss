@@ -55,3 +55,13 @@
     background: var(--primary-high);
   }
 }
+
+.custom-category-banner-background {
+   @if schemeType() == "dark" {
+        // background-image: #{this.category.uploaded_background_dark.url()};
+        background-color: black;
+    }
+  @else {
+          background: blue;
+      } 
+  }
