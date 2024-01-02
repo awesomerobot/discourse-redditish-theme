@@ -18,8 +18,6 @@ export default class CustomCategoryBanner extends Component {
     .getPropertyValue("--scheme-type")
     .trim();
 
-    console.log(schemeType);
-
     if (schemeType == "dark") {
       return htmlSafe(
         `background: url("${this.category.uploaded_background_dark?.url}");
@@ -35,8 +33,6 @@ export default class CustomCategoryBanner extends Component {
        background-position: center center;;`
       );
     }
-
-
   }
 
   get categoryBgColor() {
