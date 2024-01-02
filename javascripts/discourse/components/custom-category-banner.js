@@ -18,7 +18,7 @@ export default class CustomCategoryBanner extends Component {
     .getPropertyValue("--scheme-type")
     .trim();
 
-    console.log(schemeType);
+    // console.log(schemeType);
 
     if (schemeType == "dark") {
       return htmlSafe(
