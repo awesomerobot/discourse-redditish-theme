@@ -17,6 +17,7 @@ export default class CustomCategoryBanner extends Component {
     const schemeType = getComputedStyle(document.body)
     .getPropertyValue("--scheme-type")
     .trim();
+    var background_url;
 
     // console.log(schemeType);
 
@@ -24,12 +25,12 @@ export default class CustomCategoryBanner extends Component {
       console.log("Uploaded_background_dark.url")
       console.log(this.category.uploaded_background_dark?.url)
       if (this.category.uploaded_background_dark?.url != "") {
-        const background_url = this.category.uploaded_background_dark?.url
+        background_url = this.category.uploaded_background_dark?.url
       }
 
     }
     else {
-      const background_url = this.category.uploaded_background?.url
+      background_url = this.category.uploaded_background?.url
     }
 
     return htmlSafe(
