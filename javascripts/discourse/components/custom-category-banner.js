@@ -1,6 +1,10 @@
 import Component from "@glimmer/component";
 import { inject as service } from "@ember/service";
 
+const schemeType = getComputedStyle(document.body)
+.getPropertyValue("--scheme-type")
+.trim();
+
 export default class CustomCategoryBanner extends Component {
   @service router;
 
@@ -13,7 +17,7 @@ export default class CustomCategoryBanner extends Component {
   }
 
   get bannerBg() {
-    if (schemeType() == dark) {
+    if (schemeType == "dark") {
       return htmlSafe(
         `background: url("${this.category.uploaded_background_dark?.url}");
          background-size: cover; 
