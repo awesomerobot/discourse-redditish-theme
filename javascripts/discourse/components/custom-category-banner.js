@@ -22,14 +22,14 @@ export default class CustomCategoryBanner extends Component {
 
     if (schemeType == "dark") {
       if (this.category.uploaded_background_dark?.url != nil) {
-        const background_url = this.category.uploaded_background_dark.url
+        const background_url = this.category.uploaded_background_dark?.url
       }
 
     }
     else {
       const background_url = this.category.uploaded_background?.url
     }
-    
+
     return htmlSafe(
       `background: url("${background_url}");
      background-size: cover; 
