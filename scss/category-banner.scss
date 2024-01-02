@@ -2,20 +2,15 @@
 .custom-category-banner {
   grid-area: category-banner;
   margin: 0 0 0 -1.5em;
-  @media screen and (max-width: 200px) {
+  @media screen and (max-width: 1200px) {
     margin: 0;
   }
 
-  // .category-logo.aspect-image {
-  //   float: none;
-  //   margin: 0;
-  //   height: 100px;
-  //   width: 100px;
-  // }
-  // .category-logo.aspect-image img {
-  //   height: 100%;
-  // }
-  
+  .category-logo.aspect-image {
+    float: none;
+    margin: 0;
+  }
+
   &_background {
     display: flex;
     justify-content: center;
