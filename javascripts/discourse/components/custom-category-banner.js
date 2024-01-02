@@ -21,7 +21,9 @@ export default class CustomCategoryBanner extends Component {
     // console.log(schemeType);
 
     if (schemeType == "dark") {
-      if (this.category.uploaded_background_dark?.url != nil) {
+      console.log("Uploaded_background_dark.url")
+      console.log(this.category.uploaded_background_dark?.url)
+      if (this.category.uploaded_background_dark?.url != "") {
         const background_url = this.category.uploaded_background_dark?.url
       }
 
