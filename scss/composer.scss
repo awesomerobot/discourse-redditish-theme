@@ -104,3 +104,9 @@
     transform: scale(75%);
   }
 }
+
+[data-wrap="tooltip"] {
+  text-decoration: dotted;
+  text-decoration-line: underline;
+  color: green;
+}
