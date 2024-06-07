@@ -17,7 +17,7 @@
     margin-bottom: 0.25em;
   }
 
-  .category-name,
+  .badge-category__name,
   .discourse-tag.simple,
   .discourse-tag.simple:visited,
   .discourse-tag.simple:hover {
@@ -85,7 +85,6 @@
   > button,
   .topic-notifications-button summary {
     @include custom-card;
-    border-radius: 20px;
     height: 2.6em; // consistency hack
     padding-top: 0.6em;
     padding-bottom: 0.65em;
@@ -206,4 +205,26 @@ h3.suggested-topics-message {
 
 .more-topics__container .nav {
   position: relative;
+}
+
+html:not(.footer-nav-visible) #topic-progress-wrapper {
+  bottom: calc(env(safe-area-inset-bottom) + 1em);
+}
+
+.container.posts {
+  #topic-progress {
+    border: 1px solid var(--primary-400);
+    .nums {
+      top: 0.65em;
+    }
+  }
+  #topic-progress-wrapper {
+    --d-border-radius: 100px;
+
+    .topic-admin-menu-button .toggle-admin-menu {
+      border-right: none;
+      border-radius: var(--d-border-radius) 0 0 var(--d-border-radius);
+      height: 100%;
+    }
+  }
 }

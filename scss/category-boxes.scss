@@ -13,14 +13,14 @@
     border-top: 1px solid transparent;
     border-right: 1px solid transparent;
     border-bottom: 1px solid transparent;
-    border-left: 6px solid var(--category-color);
+    border-left: 6px solid var(--category-badge-color);
 
     .discourse-no-touch & {
       &:hover {
         border-top: 1px solid var(--redditish-border-highlight-color);
         border-right: 1px solid var(--redditish-border-highlight-color);
         border-bottom: 1px solid var(--redditish-border-highlight-color);
-        border-left: 6px solid var(--category-color);
+        border-left: 6px solid var(--category-badge-color);
       }
     }
 
