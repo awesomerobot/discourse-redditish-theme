@@ -107,6 +107,7 @@ body.category,
 
 .d-header-icons .icon {
   margin-left: 0;
+  padding: 0 !important; // overrides another important
 }
 
 .body-page .nav-pills {
@@ -116,10 +117,15 @@ body.category,
 #topic-footer-buttons {
   margin-bottom: calc(env(safe-area-inset-bottom) + 1em);
 
-  .topic-notifications-button .reason .select-kit,
-  .pinned-button .reason .select-kit {
-    .selected-name .name {
-      display: none;
+  .topic-notifications-button .reason,
+  .pinned-button .reason {
+    .select-kit {
+      .selected-name .name {
+        display: none;
+      }
+    }
+    .text {
+      margin: 0.5em 0 0 0;
     }
   }
   &.docked {
@@ -135,19 +141,29 @@ body.category,
   }
 }
 
+html:not(.footer-nav-visible) #topic-progress-wrapper {
+  bottom: calc(env(safe-area-inset-bottom) + 1em);
+}
+
 #topic-progress {
+  --d-border-radius: 100px;
   height: 2.5em;
   margin-right: 0.5em;
-  margin-left: 1em;
+  margin-left: 0;
   border-radius: 100px;
   border: 1px solid var(--primary-low-mid);
   overflow: hidden;
   .nums {
     top: 0.5em;
   }
-  .bg {
-    border-radius: 100px;
-  }
+}
+
+.container.posts
+  #topic-progress-wrapper
+  .topic-admin-menu-button
+  .toggle-admin-menu {
+  border-right: none;
+  border-radius: 100px 0 0 100px;
 }
 
 .category-boxes,

@@ -167,3 +167,19 @@ body {
 .body-page {
   @include custom-card;
 }
+
+.powered-by-discourse {
+  border: 1px solid var(--primary-500);
+  grid-area: content;
+  align-self: end;
+}
+
+// makes some room for "powered by discourse"
+
+#main-outlet {
+  padding-bottom: 2em;
+}
+
+html.composer-open #main-outlet {
+  padding-bottom: var(--composer-height);
+}

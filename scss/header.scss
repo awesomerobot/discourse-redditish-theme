@@ -34,7 +34,7 @@
 }
 
 .d-header-icons .icon {
-  padding: 0.25em 0.25em;
+  padding: 0.25em !important; // too specific in core
   border-radius: var(--d-button-border-radius);
   margin-left: 0.5em;
 
