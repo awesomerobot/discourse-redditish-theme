@@ -30,4 +30,18 @@ export default class CustomCategoryBanner extends Component {
   get categoryTextColor() {
     return htmlSafe(`color: ${this.category.text_color};`);
   }
+
+  get categorySlug() {
+    return this.category.slug || this.generateSlug(this.category.name);
+  }
+
+  generateSlug(name) {
+    return name
+      .toLowerCase()            // Convert to lowercase
+      .replace(/\s+/g, '-')     // Replace spaces with hyphens
+      .replace(/[^\w\-]+/g, '') // Remove all non-word characters
+      .replace(/\-\-+/g, '-')   // Replace multiple hyphens with a single hyphen
+      .replace(/^-+/, '')       // Trim hyphens from the start
+      .replace(/-+$/, '');      // Trim hyphens from the end
+  }
 }
