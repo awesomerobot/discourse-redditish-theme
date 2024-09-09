@@ -9,7 +9,9 @@
       {{/unless}}
     {{/unless}}
     <span class="custom-topic-layout_meta-posted">
-      <span class="custom-topic-layout_meta-posted-by">Posted by</span>
+      <span class="custom-topic-layout_meta-posted-by">
+        {{theme-i18n "posted_by"}}
+      </span>
       <a
         data-user-card={{topic.posters.0.user.username}}
         href="/u/{{topic.posters.0.user.username}}"
@@ -69,11 +71,11 @@
     <span class="reply-count">
       {{d-icon "reply"}}
       {{topic.replyCount}}
-      Replies
+      {{i18n "replies"}}
     </span>
     <span class="share-toggle">
       {{d-icon "link"}}
-      Share
+      {{i18n "post.quote_share"}}
     </span>
   </div>
 </div>
