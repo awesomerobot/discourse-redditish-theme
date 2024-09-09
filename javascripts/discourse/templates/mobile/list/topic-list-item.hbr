@@ -69,11 +69,11 @@
     <span class="reply-count">
       {{d-icon "reply"}}
       {{topic.replyCount}}
-      Replies
+      {{i18n "replies"}}
     </span>
     <span class="share-toggle">
       {{d-icon "link"}}
-      Share
+      {{i18n "post.quote_share"}}
     </span>
   </div>
 </div>
