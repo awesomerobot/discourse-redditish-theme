@@ -1,12 +1,14 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
-import showModal from "discourse/lib/show-modal";
 import { wantsNewWindow } from "discourse/lib/intercept-click";
+import ShareTopicModal from "discourse/components/modal/share-topic";
 
 export default {
   name: "redditish-customize-topic-list-item",
 
   initialize() {
     withPluginApi("0.8", (api) => {
+      const modal = api.container.lookup("service:modal");
+
       api.modifyClass("component:topic-list-item", {
         pluginId: "redditish-theme",
 
@@ -35,10 +37,10 @@ export default {
           }
 
           if (target.closest(".share-toggle")) {
-            const controller = showModal("share-topic", {
-              model: this.topic.category,
+            modal.show(ShareTopicModal, {
+              model: { topic: this.topic },
             });
-            controller.set("topic", this.topic);
+
             return true;
           }
 
